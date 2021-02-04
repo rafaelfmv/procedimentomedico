@@ -1,0 +1,14 @@
+version: "1.0"
+services:
+  saldos:
+    container_name: procedimento
+    image: procedimento:develop
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+    ports:
+      - 8086:8086
+networks:
+  default:
+    external:
+      name: procedimentomedico

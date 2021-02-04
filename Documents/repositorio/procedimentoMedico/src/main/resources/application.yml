@@ -1,0 +1,36 @@
+## Configuração Default da Aplicação ##
+server:
+  port: 8078
+
+spring:
+  application:
+    name: processamentomedico
+  jpa:
+    show-sql: false
+    properties:
+      hibernate:
+        ddl-auto: update
+        temp:
+          use_jdbc_metadata_defaults: false
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+  jmx:
+    enabled: false
+  datasource:
+    url: jdbc:postgresql://localhost:5432/consulta?ApplicationName=${spring.application.name}
+    username: postgress
+    password: postgress
+    hikari:
+      minimum-idle: 2
+      maximum-pool-size: 3
+
+
+info:
+  app:
+    name: ${spring.application.name}
+    version: 1.0.0
+    description: procedimento medico
+
+
+
+
+
