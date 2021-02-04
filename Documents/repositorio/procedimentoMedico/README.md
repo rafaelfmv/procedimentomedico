@@ -7,7 +7,7 @@ usuario:postgress
 senha:postgress
 
 Swagger 3
-JUnit 5 com banco h2
+JUnit 5 com banco de dados h2
 
 docker run image:version
 
